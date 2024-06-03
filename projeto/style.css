@@ -1,0 +1,219 @@
+/* Global Styles */
+body {
+  font-family: "Times New Roman", Georgia, Serif;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #F1F1F1;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+  letter-spacing: 4px;
+}
+.navbar a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #024129;
+  padding: 14px 20px;
+  display: inline-block;
+}
+.navbar .right {
+  float: right;
+}
+.nav0:hover, .nav1:hover, .nav2:hover {
+  transform: translateY(-5px);
+}
+/*div text*/
+.texto-objetivo {
+  color: #024129; 
+  font: 1.5em Georgia, serif;
+  text-align: center;
+}
+
+
+
+/* Header */
+.header {
+  position: relative;
+  width: 100%;
+  height: 400px; 
+  max-width: 1600px;
+  min-width: 500px;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #024129;
+}
+.text-container {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+}
+.text-container h1 {
+  position: relative; 
+  animation: moveText 10s linear infinite;
+  font-size: 50px;
+  color: #f1f1f1;
+}
+
+/* Keyframes for text animation */
+@keyframes moveText {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+/* Sections */
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 64px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+.section img {
+  flex: 1;
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+.section .content {
+  flex: 1;
+  padding: 20px;
+}
+.section .content h1{
+  color:#024129;
+}
+.section h1, .section h5, .section p {
+  text-align: left;
+  color: #012045;
+}
+.section p.large {
+  font-size: 18px;
+}
+
+/* Contact Form */
+.contact-form {
+  padding: 64px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+.contact-form h1 {
+  text-align: center;
+  color: #024129;
+  
+}
+.contact-form input, .contact-form textarea, .contact-form button {
+  width: 100%;
+  padding: 16px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.contact-form button {
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+}
+
+p {
+  text-align: left;
+  line-height: 1.5; /* Espaçamento entre linhas */
+  margin-bottom: 20px; /* Espaçamento entre parágrafos */
+}
+
+/*Texto*/
+.section p  {
+  text-align: justify;
+}
+.section li  {
+  text-align: justify;
+  line-height: 1.5
+}
+.texto-contato{
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/*more info*/
+.more-info{
+  text-align: center;
+ 
+}
+.more-info a {
+  font: 1.5em Georgia, serif;
+  color: #024129; 
+  font-weight: bold;
+  text-decoration: none; 
+}
+
+/* Footer*/
+.footer {
+  text-align: center;
+  padding: 32px;
+  color: #f1f1f1;
+  background-color: #024129;
+}
+
+
+/*Responsivo*/
+@media only screen and (max-width: 600px) {
+  /* Navbar */
+  .navbar {
+    padding: 5px;
+  }
+  .navbar a {
+    padding: 8px 10px;
+  }
+
+  /*texto-objetivo*/
+  .texto-objetivo {
+    font-size: 20px;
+    text-align: center; /* Justifica o texto */
+    padding: 32px 20px;
+    hyphens: auto; /* Ativa a hifenização */
+    word-spacing: -0.5px; /* Ajusta o espaçamento entre palavras */
+}
+  /* Header */
+  .header {
+    height: 200px;
+  }
+  .text-container h1 {
+    font-size: 25px;
+  }
+
+  /* Sections */
+  .section {
+    padding: 32px 10px;
+  }
+  .section img {
+    max-width: 100%;
+  }
+
+  /* Contact Form */
+  .contact-form {
+    padding: 32px 10px;
+  }
+  .more-info a{
+    font-size: 20px;
+  }
+}

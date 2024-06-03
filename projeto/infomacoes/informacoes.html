@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GardenBot: O Robô de Jardim</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Form styles */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (sit on top) -->
+    <div class="navbar">
+      <a href="../index.html" class="navbar-item nav0">Home</a>
+      <!-- Right-sided navbar links. Hide them on small screens -->
+      <div class="right">
+        <a href="#garden" class="navbar-item nav1">GardenBot</a>
+        <a href="#sobre" class="navbar-item nav2">Sobre nós</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="main-section">
+        <div class="image-container">
+          <img
+            src="../gardenbot/7.png"
+            alt="GardenBot: O Robô de Jardim"
+          />
+        </div>
+        <div class="info-section" id="garden">
+          <h1>
+            GardenBot: O Robô de Jardim automatizando o cuidado de suas plantas
+          </h1>
+          <div class="location">
+            <a href="#">Design</a> <span>•</span>
+            <a href="#">Produto</a>
+          </div>
+          <div class="pledge-info">
+            <h2>€47.000</h2>
+            <p>arrecadados de uma meta de €50.000</p>
+            <p>56 apoiadores</p>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-section">
+          <div class="reward">
+            <h3>CONTRIBUIÇÃO <span></span></h3>
+            <p>
+              Sabemos que cada centavo conta e sua generosidade nos ajuda a nos
+              aproximarmos de nosso objetivo.
+            </p>
+            <p><strong>Apoiadores:</strong> 8</p>
+            <button onclick="openModal()">Contribuir</button>
+          </div>
+          <div class="reward">
+            <h3>Reward</h3>
+            <p>
+                Agradecemos sinceramente a sua contribuição! Como forma de agradecimento, você receberá um boné ou uma camisola da nossa marca. Não se esqueça de compartilhar com amigos e familiares para nos ajudar a criar um projeto que será essencial para manter nossos jardins bonitos e saudáveis. Sua participação é fundamental e estamos empolgados em ter você ao nosso lado nessa jornada. Muito obrigado por fazer parte dessa iniciativa!
+            </p>
+            <ul>
+                <li>Se o apoio for entre 10 e 50 euros, você tem direito a um boné.</li>
+                <li>Se o apoio for entre 50 e 100 euros, você tem direito a uma camisola e um boné.</li>
+            </ul>
+        </div>
+        
+        
+        </div>
+      </div>
+<!-- Meet Our Team Section -->
+<div class="team-section" id="sobre">
+  <h1>Conheça Nossa Equipe</h1>
+  <p>Gostaríamos de apresentá-lo à nossa equipe incrível que faz a mágica acontecer!</p>
+  <div class="team-container">
+      <div class="team-member">
+          <img src="1.jpg" alt="Membro da Equipe 1">
+          <p>Membro da Equipe 1</p>
+          <p>Desenvolvedor de Software</p>
+          <p>Responsável pelo desenvolvimento e manutenção do código do GardenBot.</p>
+      </div>
+      <div class="team-member">
+          <img src="2.jpg" alt="Membro da Equipe 2">
+          <p>Membro da Equipe 2</p>
+          <p>Engenheiro de Hardware</p>
+          <p>Cuida da criação e aprimoramento dos componentes físicos do GardenBot.</p>
+      </div>
+      <div class="team-member">
+          <img src="3.jpg" alt="Membro da Equipe 3">
+          <p>Membro da Equipe 3</p>
+          <p>Designer de Produto</p>
+          <p>Desenvolve o design estético e funcional do GardenBot, garantindo facilidade de uso.</p>
+      </div>
+      <div class="team-member">
+          <img src="4.jpg" alt="Membro da Equipe 4">
+          <p>Membro da Equipe 4</p>
+          <p>Gerente de Projeto</p>
+          <p>Coordena as atividades da equipe, garantindo o cumprimento dos prazos e objetivos.</p>
+      </div>
+      <div class="team-member">
+          <img src="5.jpg" alt="Membro da Equipe 5">
+          <p>Membro da Equipe 5</p>
+          <p>Especialista em Marketing</p>
+          <p>Responsável por promover o GardenBot e atrair novos apoiadores e clientes.</p>
+      </div>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <form>
+      <label for="fname">Nome:</label>
+      <input type="text" id="fname" name="fname">
+      
+      <label for="lname">Apelido:</label>
+      <input type="text" id="lname" name="lname">
+      
+      <label for="contact">Contacto:</label>
+      <input type="text" id="contact" name="contact">
+      
+      <label for="payment">Forma de Contribuição:</label>
+      <select id="payment" name="payment">
+        <option value="creditcard">Cartão de Crédito</option>
+        <option value="debitcard">Cartão de Débito</option>
+      </select>
+      
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Open the modal
+    function openModal() {
+      modal.style.display = "block";
+    }
+
+    // Close the modal
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    // Close the modal if the user clicks outside of it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+</script>
+  </body>
+</html>
